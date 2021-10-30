@@ -20,18 +20,18 @@ const IndexesWrapper = styled.div`
 `;
 
 const indexArr = [
-  { data: { title: 'Unresolved', value: 60 } },
-  { data: { title: 'Overdue', value: 16 } },
-  { data: { title: 'Open', value: 43 } },
-  { data: { title: 'On hold', value: 64 } },
+  { id: 1, data: { title: 'Unresolved', value: 60 } },
+  { id: 2, data: { title: 'Overdue', value: 16 } },
+  { id: 3, data: { title: 'Open', value: 43 } },
+  { id: 4, data: { title: 'On hold', value: 64 } },
 ];
 
 export function Indexes() {
   return (
     <IndexesWrapper>
-      {indexArr.map((index) => (
-        <Card>
-          <IndexElement data={index.data} />
+      {indexArr.map(({ data, id }) => (
+        <Card key={id}>
+          <IndexElement data={data} />
         </Card>
       ))}
     </IndexesWrapper>

@@ -9,11 +9,11 @@ const TrendsWrapper = styled.div``;
 const TrendsIndexesWrapper = styled.div``;
 
 const indexArr = [
-  { data: { title: 'Resolved', value: 449 } },
-  { data: { title: 'Received', value: 426 } },
-  { data: { title: 'Average first response time', value: '33m' } },
-  { data: { title: 'Average response time', value: '3h 8m' } },
-  { data: { title: 'Resolution within SLA', value: '94%' } },
+  { id: 1, data: { title: 'Resolved', value: 449 } },
+  { id: 2, data: { title: 'Received', value: 426 } },
+  { id: 3, data: { title: 'Average first response time', value: '33m' } },
+  { id: 4, data: { title: 'Average response time', value: '3h 8m' } },
+  { id: 5, data: { title: 'Resolution within SLA', value: '94%' } },
 ];
 
 export function Trends() {
@@ -22,8 +22,8 @@ export function Trends() {
       <TrendsWrapper>
         <TrendsGraph />
         <TrendsIndexesWrapper>
-          {indexArr.map((index) => (
-            <IndexElement small data={index.data} />
+          {indexArr.map(({ data, id }) => (
+            <IndexElement small key={id} data={data} />
           ))}
         </TrendsIndexesWrapper>
       </TrendsWrapper>
