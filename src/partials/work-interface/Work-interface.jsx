@@ -19,11 +19,15 @@ const AsideWrapper = styled.div`
 const InterfaceMain = styled.main`
   flex: 1 1 250px;
   height: 100vh;
+
+  #header {
+    padding: 0 30px;
+  }
+`;
+const MainContent = styled.section`
+  height: calc(100% - 100px);
   padding: 0 30px;
   overflow-y: auto;
-`;
-const MainWrapper = styled.div`
-  padding: 0 0 30px;
 `;
 
 export function WorkInterface({ children, location }) {
@@ -36,10 +40,8 @@ export function WorkInterface({ children, location }) {
         </AsideWrapper>
       </InterfaceAside>
       <InterfaceMain>
-        <MainWrapper>
-          <Header />
-          {children}
-        </MainWrapper>
+        <Header id="header" />
+        <MainContent>{children}</MainContent>
       </InterfaceMain>
     </InterfaceWrapper>
   );

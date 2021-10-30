@@ -7,8 +7,7 @@ import { useAppSelector } from '../../app/hooks';
 import { selectTitle } from '../../features/header/headerSlice';
 
 const HeaderSection = styled.section`
-  padding: 30px 0;
-  height: 44px;
+  height: 100px;
   display: flex;
   align-items: center;
 
@@ -72,11 +71,11 @@ const AuthImage = styled.div`
   }
 `;
 
-export function Header() {
+export function Header({ ...all }) {
   const [searchVisibility, changeSearchVisibility] = useState(false);
   const title = useAppSelector(selectTitle);
   return (
-    <HeaderSection>
+    <HeaderSection {...all}>
       <HeaderWrapper>
         <HeaderTitle>{title}</HeaderTitle>
         <HeaderControls>
