@@ -3,7 +3,7 @@
     "id": "T_001_l",
     "name": "Light",
     "colors": {
-      "body": "#ffffff",
+      "body": "#F7F8FC",
       "text": "#252733",
       "textAlt": "#C5C7CD",
       "aside": "#363740",
@@ -15,6 +15,7 @@
         "low": "#FEC400",
         "normal": "#29CC97"
       },
+      "card": "#FFFFFF",
       "link": {
         "text": "#3751FF"
       }

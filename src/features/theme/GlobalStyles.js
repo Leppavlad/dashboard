@@ -79,6 +79,13 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  main {
+    .card {
+      background-color: ${({ theme }) => theme.colors.card};
+      border: 1px solid ${({ theme }) => theme.colors.interfaceElement}77;
+    }
+  }
+
   button {
     border: 0;
     display: inline-block;
